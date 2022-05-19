@@ -1,0 +1,8 @@
+<map id="hzl_ServerCtx" name="hzl_ServerCtx">
+<area shape="rect" id="node1" title="Configuration and status of the HazelNet Server library." alt="" coords="297,107,403,133"/>
+<area shape="rect" id="node2" href="$structhzl___server_config.html" title="Hazelnet Server constant configuration." alt="" coords="25,5,148,32"/>
+<area shape="rect" id="node3" href="$structhzl___server_clients_config.html" title="Hazelnet Server constant per&#45;Client configuration." alt="" coords="5,56,168,83"/>
+<area shape="rect" id="node4" href="$structhzl___server_group_config.html" title="Hazelnet Server constant Group configuration." alt="" coords="8,107,165,133"/>
+<area shape="rect" id="node5" href="$structhzl___server_group_state.html" title="Hazelnet Server variable State." alt="" coords="11,157,162,184"/>
+<area shape="rect" id="node6" href="$structhzl___io__t.html" title="Functions used by Hazelnet to interact with the rest of the system in order to obtain random numbers,..." alt="" coords="53,208,121,235"/>
+</map>
