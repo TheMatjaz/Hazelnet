@@ -1,8 +1,8 @@
 Hazelnet library: CAN FD bus encryption, authentication and freshness
 =====================================================================
 
-Hazelnet implements the Client and Server roles of the CAN Bus Security (CBS)
-protocol, which secures the CAN FD traffic providing encryption, authenticity
+Hazelnet implements the Client and Server roles of the
+[CAN Bus Security (CBS) protocol](https://matjaz.it/cbs/), which secures the CAN FD traffic providing encryption, authenticity,
 and freshness of the messages.
 
 The user of the library must handle the physical transmission and reception

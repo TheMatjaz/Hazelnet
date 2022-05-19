@@ -85,7 +85,6 @@ extern "C"
  * @retval #HZL_OK on success.
  * @retval #HZL_ERR_NULL_CTX if \p pCtx is NULL.
  * @retval #HZL_ERR_NULL_FILENAME if \p fileName is NULL.
- * @retval #HZL_ERR_NULL_LOW_LVL_TX_FUNC if \p lowLvlTxFunc is NULL.
  * @retval #HZL_ERR_CANNOT_OPEN_CONFIG_FILE if the file cannot be opened (does not exists,
  *         or the permissions are not correct)
  * @retval #HZL_ERR_MALLOC_FAILED if the heap-allocation fails (out of memory).
@@ -122,7 +121,7 @@ hzl_ServerFree(hzl_ServerCtx_t** pCtx);
  *
  * @param [out] pMsg where to load the new message. Must not be NULL.
  * @retval #HZL_OK on success.
- * @retval #HZL_ERR_NULL_MSG if pMsg is NULL.
+ * @retval #HZL_ERR_NULL_PDU if pMsg is NULL.
  * @retval #HZL_ERR_MALLOC_FAILED if the heap-allocation fails (out of memory).
  */
 HZL_API hzl_Err_t

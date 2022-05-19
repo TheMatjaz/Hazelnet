@@ -52,6 +52,7 @@ if (DOXYGEN_FOUND)
     set(DOXYGEN_OPTIMIZE_OUTPUT_FOR_C YES)
     set(DOXYGEN_MARKDOWN_SUPPORT YES)
     set(DOXYGEN_TAB_SIZE 4)
+    set(DOXYGEN_PREDEFINED WIN32)
 
     # Components and look of the output
     set(DOXYGEN_OUTPUT_LANGUAGE English)
