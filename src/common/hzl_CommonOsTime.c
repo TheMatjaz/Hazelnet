@@ -98,8 +98,8 @@ hzl_OsCurrentTime(hzl_Timestamp_t* const timestamp)
         // Truncate the high bits, a we only need timestamps that show us a relative
         // time for a short timeframe (some days at the very most).
         // No rounding, we don't need this kind of accuracy.
-        *timestamp = (hzl_Timestamp_t) (now.tv_sec * 1000U);
-        *timestamp += (hzl_Timestamp_t) (now.tv_usec / 1000U);
+        *timestamp = (hzl_Timestamp_t) ((hzl_Timestamp_t) now.tv_sec * 1000U);
+        *timestamp += (hzl_Timestamp_t) ((hzl_Timestamp_t) now.tv_usec / 1000U);
         return HZL_OK;
     }
     else
