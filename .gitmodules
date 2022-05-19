@@ -1,0 +1,9 @@
+[submodule "external/atto"]
+	path = external/atto
+	url = https://github.com/thematjaz/atto
+[submodule "external/libascon"]
+	path = external/libascon
+	url = https://github.com/TheMatjaz/LibAscon
+[submodule "external/hzlconfig"]
+	path = external/hzlconfig
+	url = https://github.com/TheMatjaz/HazelnetConfig
