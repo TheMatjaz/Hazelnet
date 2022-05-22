@@ -42,7 +42,7 @@ extern "C"
 /**
  * Hazelnet Client and Server library version using semantic versioning.
  */
-#define HZL_VERSION "v3.0.0"
+#define HZL_VERSION "v3.0.1"
 
 /** Version of the CAN Bus Security protocol that the Client and Server libraries implement. */
 #define HZL_CBS_PROTOCOL_VERSION_SUPPORTED "v1.3"

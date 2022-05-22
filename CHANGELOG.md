@@ -10,6 +10,18 @@ and this project adheres to
 
 *******************************************************************************
 
+[3.0.1] - 2022-05-22
+----------------------------------------
+
+Repo fixes, no changes in the code.
+
+### Fixed
+
+- Fixed commit hash pointing to v1.0.0 of HazelnetConfig (`external/hzlconfig`)
+  after the submodule repo has changed hashes. No code change.
+- Readme improvements: clarify briefly what CBS is and add links to the
+  Hazelnet Demo Platform.
+
 [3.0.0] - 2022-05-16
 ----------------------------------------
 
