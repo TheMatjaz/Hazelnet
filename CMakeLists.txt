@@ -30,7 +30,7 @@
 cmake_minimum_required(VERSION 3.14)
 project(Hazelnet
         LANGUAGES C
-        VERSION 3.0.0
+        VERSION 3.0.1
         DESCRIPTION
         "Reference implementation of the CAN Bus Security (CBS) protocol")
 
