@@ -1,9 +1,12 @@
-Hazelnet library: CAN FD bus encryption, authentication and freshness
-=====================================================================
+Hazelnet library: CAN FD bus encryption, authentication, and freshness
+======================================================================
 
 Hazelnet implements the Client and Server roles of the
-[CAN Bus Security (CBS) protocol](https://matjaz.it/cbs/), which secures the CAN FD traffic providing encryption, authenticity,
-and freshness of the messages.
+[CAN Bus Security (CBS) protocol](https://matjaz.it/cbs/), which secures the
+**CAN FD** traffic providing message **encryption, authenticity, and freshness**.
+CBS focuses on lightweight encryption using **symmetric** primitives only,
+**multicast** communication, and an assurance of **freshness** of the messages
+to prevent replay attacks.
 
 The user of the library must handle the physical transmission and reception
 manually as this library only handles the building of messages to transmit and
@@ -33,8 +36,10 @@ Hazelnet depends on other projects from the same author:
   configuration of the entire bus in one JSON file and generate the binary
   configurations of each Hazelnet instance (CBS Party).
 
-The dependencies are included in this project as Git Submodules, so be sure
-to clone this repository with the `--recurse-submodules` option.
+All dependencies are **included in this project as Git Submodules**, so be sure
+to clone this repository with the `--recurse-submodules` option. If you
+have already cloned it normally, then run
+`git submodule update --init --recursive`.
 
 You only need the C99/C11 standard library to compile the library for any
 platform, including embedded. No heap-allocation required (malloc).
@@ -61,9 +66,9 @@ randomness.
 Known limitations
 ---------------------------------------
 
-The library is **not thread safe**. All API calls on the same context should
-be performed within the same thread (or RTOS task) or mutual exclusion locks
-should be placed by the library user around said API calls to protect the
+The library is **not thread safe**. All API calls on the **same** context
+should be performed within the same thread (or RTOS task) or mutual exclusion
+locks should be placed by the library user around said API calls to protect the
 library from race conditions. For the time being, no thread-safe protections
 have been implemented as they are not easily portable.
 
@@ -89,8 +94,16 @@ Project structure
     implement.
 
 
-Example usage of the Client library API
+Example usage of the library API
 ---------------------------------------
+
+> See it in practice in the
+> [Hazelnet Demo Platform](https://github.com/TheMatjaz/HazelnetDemoPlatform)
+> showcasing a few microcontrollers exchanging dummy encrypted messages.
+> In particular the [`Sources/hzlPlatform_TaskHzl.c`](https://github.com/TheMatjaz/HazelnetDemoPlatform/blob/v1.1.0/Sources/hzlPlatform_TaskHzl.c)
+> file.
+
+### Client library API
 
 To use the client library, the following headers are required:
 
@@ -212,8 +225,7 @@ err = hzl_ClientDeInit(&ctx); // Instead of ClientFree()
 if (err != HZL_OK) { custom_error_handling(err); }
 ```
 
-Example usage of the Server library API
----------------------------------------
+### Server library API
 
 The Server library has an analogous API to the Client, with the same interface
 when it comes to processing of the messages. The main difference is that the
